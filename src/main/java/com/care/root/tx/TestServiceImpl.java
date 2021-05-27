@@ -11,9 +11,12 @@ public class TestServiceImpl {
 	@Autowired TestMapper mapper;
 	public void buy (Model model, int num) {
 		int [] result = {0,0};
-		
-		result[0] = mapper.userInsert(num);
-		result[1] = mapper.systemInsert(num);
+		try {
+			result[0] = mapper.userInsert(num);
+			result[1] = mapper.systemInsert(num);			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		model.addAttribute("result", result);
 	}
