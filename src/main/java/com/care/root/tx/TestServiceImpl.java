@@ -14,6 +14,8 @@ public class TestServiceImpl {
 	
 	@Transactional
 	public void buy (Model model, int num) {
+		System.out.println("서비스 실행");
+
 		int [] result = {0,0};
 		try {
 			result[0] = mapper.userInsert(num);

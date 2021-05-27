@@ -12,6 +12,7 @@ public class TestController {
 	@Autowired TestServiceImpl ts;
 	@GetMapping("buy_form")
 	public String buy_form() {
+		System.out.println("==== buy_form 시작 ====");
 		return "buy_form";
 	}
 	@PostMapping("buy")
