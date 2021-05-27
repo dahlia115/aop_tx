@@ -1,8 +1,20 @@
 package com.care.root.tx;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
+import com.care.root.mapper.TestMapper;
 
 @Service
 public class TestServiceImpl {
-
+	@Autowired TestMapper mapper;
+	public void buy (Model model, int num) {
+		int [] result = {0,0};
+		
+		result[0] = mapper.userInsert(num);
+		result[1] = mapper.systemInsert(num);
+		
+		model.addAttribute("result", result);
+	}
 }
