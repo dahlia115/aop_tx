@@ -17,6 +17,7 @@ public class TxConfig {
 	@Bean
 	public PlatformTransactionManager transactionManager() {
 		DataSourceTransactionManager txMgr = new DataSourceTransactionManager();
+		txMgr.setDataSource(ds);
 		return txMgr;
 	}
 }
