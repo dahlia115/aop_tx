@@ -27,6 +27,10 @@ public class TestController {
 		
 		return "db_result";
 	}
+	@GetMapping("chart")
+	public String chart() {
+		return "testchart";
+	}
 }
 
 
