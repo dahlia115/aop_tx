@@ -20,6 +20,12 @@ public class TestController {
 		ts.buy(model,num);
 		return "result";
 	}
+	@GetMapping("db_result")
+	public String db_result(Model model) {
+		ts.dbResult(model);
+		
+		return "db_result";
+	}
 }
 
 

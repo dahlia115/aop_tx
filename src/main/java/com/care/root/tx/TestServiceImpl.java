@@ -20,4 +20,8 @@ public class TestServiceImpl {
 		
 		model.addAttribute("result", result);
 	}
+	public void dbResult(Model model) {
+		model.addAttribute("user", mapper.userDbResult());
+		model.addAttribute("system", mapper.systemDbResult());
+	}
 }
